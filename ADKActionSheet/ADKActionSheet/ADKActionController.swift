@@ -27,7 +27,7 @@ open class ADKActionController : UIViewController {
     
     lazy open var collectionViewLayout: DynamicCollectionViewFlowLayout = { [unowned self] in
         let collectionViewLayout = DynamicCollectionViewFlowLayout()
-        collectionViewLayout.useDynamicAnimator = false//self.settings.behavior.useDynamics
+        collectionViewLayout.useDynamicAnimator = false
         collectionViewLayout.minimumInteritemSpacing = 0.0
         collectionViewLayout.minimumLineSpacing = 0
         return collectionViewLayout
@@ -36,13 +36,13 @@ open class ADKActionController : UIViewController {
     
     lazy open var collectionView: UICollectionView = { [unowned self] in
         let collectionView = UICollectionView(frame: UIScreen.main.bounds, collectionViewLayout: self.collectionViewLayout)
-        collectionView.alwaysBounceVertical = false//self.settings.behavior.bounces
+        collectionView.alwaysBounceVertical = false
         collectionView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
         collectionView.backgroundColor = .clear
-        collectionView.bounces = false//self.settings.behavior.bounces
+        collectionView.bounces = false
         collectionView.dataSource = self
         collectionView.delegate = self
-        collectionView.isScrollEnabled = false//self.settings.behavior.scrollEnabled
+        collectionView.isScrollEnabled = false
         collectionView.showsVerticalScrollIndicator = false
         let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(ADKActionController.tapGestureDidRecognize(_:)))
         collectionView.backgroundView = UIView(frame: collectionView.bounds)

@@ -20,11 +20,20 @@ class ViewController: UIViewController {
         
         let actionController = ADKActionSheet()
         actionController.modalPresentationStyle = .overCurrentContext
-        actionController.addAction(action: Action(ActionData(title: "Upload from Library", image: UIImage(named: "icon-galary")!), handler: { (action) in
+        actionController.addAction(action: Action(ActionData(title: "Invite User", image: UIImage(named: "icon-galary")!), handler: { (action) in
             
             print("I am tapped")
         }))
-        actionController.addAction(action: Action(ActionData(title: "Make in AR", image: UIImage(named: "icon-galary")!), handler: { (action) in
+        actionController.addAction(action: Action(ActionData(title: "Delete User ", image: UIImage(named: "icon-galary")!), handler: { (action) in
+            
+            print("I am tapped again")
+        }))
+        
+        actionController.addAction(action: Action(ActionData(title: "Report User ", image: UIImage(named: "icon-galary")!), handler: { (action) in
+            
+            print("I am tapped again")
+        }))
+        actionController.addAction(action: Action(ActionData(title: "Add User ", image: UIImage(named: "icon-galary")!), handler: { (action) in
             
             print("I am tapped again")
         }))
